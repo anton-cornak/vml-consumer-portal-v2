@@ -1,22 +1,26 @@
 import React, { ReactElement } from 'react';
-import Dropzone from 'react-dropzone';
+import { useDropzone } from 'react-dropzone';
 import { FormattedMessage } from 'react-intl';
+import { Icon } from '@vismaux/react-nc4';
 
 function Demo(): ReactElement {
+	const { getRootProps, getInputProps } = useDropzone({});
 	return (
-		<Dropzone onDrop={(acceptedFiles) => console.log(acceptedFiles)}>
-			{({ getRootProps, getInputProps }) => (
-				<section>
-					{/* eslint-disable react/jsx-props-no-spreading */}
-					<div {...getRootProps()}>
-						<input {...getInputProps()} />
-						<p>
-							<FormattedMessage id="dropzone.description" />
-						</p>
-					</div>
-				</section>
-			)}
-		</Dropzone>
+		<>
+			{/* eslint-disable react/jsx-props-no-spreading */}
+			<div {...getRootProps({ className: 'dropzone' })}>
+				<input className="input-zone" {...getInputProps()} />
+				<p className="dropzone-content">
+					<FormattedMessage id="dropzone.description" />
+				</p>
+				<Icon
+					name="upload"
+					size="lg"
+					disabled
+					className="dropzone-icon"
+				/>
+			</div>
+		</>
 	);
 }
 
