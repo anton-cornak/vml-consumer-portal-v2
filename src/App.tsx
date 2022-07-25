@@ -2,9 +2,11 @@
 
 import React from 'react';
 import { IntlProvider, FormattedMessage } from 'react-intl';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import messagesEN from './translations/en-US.json';
 import messagesSK from './translations/sk-SK.json';
+import Home from './screens/home';
 
 const implementedLanguages: Array<string> = ['en-US', 'sk-SK'];
 const messages: { [key: string]: any } = {
@@ -30,10 +32,13 @@ function App() {
 				messages[locale(implementedLanguages, navigator.language)]
 			}
 		>
-			Your language is: {locale(implementedLanguages, navigator.language)}
-			. <br />
-			<br />
-			<FormattedMessage id="greetings" />
+			<Router>
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="/welcome" element={<Home />} />
+				</Routes>
+				<FormattedMessage id="greetings" />
+			</Router>
 		</IntlProvider>
 	);
 }
