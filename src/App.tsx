@@ -29,12 +29,12 @@ function App() {
 		return 'en-US';
 	};
 
+	const currentLanguage = locale(implementedLanguages, navigator.language);
+
 	return (
 		<IntlProvider
-			locale={locale(implementedLanguages, navigator.language)}
-			messages={
-				messages[locale(implementedLanguages, navigator.language)]
-			}
+			locale={currentLanguage}
+			messages={messages[currentLanguage]}
 		>
 			<Router>
 				<Navigation>

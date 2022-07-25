@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, ReactElement } from 'react';
 import { Link } from 'react-router-dom';
 
 import { FormattedMessage } from 'react-intl';
@@ -14,13 +14,13 @@ import {
 	NavbarNavMenuUserMenuDivider,
 } from '@vismaux/react-nc4';
 
-function Navigation(props: any) {
+interface NavigationProps {
+	children: React.ReactNode;
+}
+
+function Navigation(props: NavigationProps): ReactElement {
 	const { children } = props;
 	const [toggleNavMenu, setToggleNavMenu] = useState(false);
-
-	const toggleNavMenuHandler = () => {
-		setToggleNavMenu(!toggleNavMenu);
-	};
 
 	return (
 		<div>
@@ -49,7 +49,7 @@ function Navigation(props: any) {
 						<NavbarNavMenuUser expanded={toggleNavMenu} showIcon>
 							<NavbarNavMenuUserLink
 								name="User"
-								onClick={toggleNavMenuHandler}
+								onClick={() => setToggleNavMenu(!toggleNavMenu)}
 							/>
 							<NavbarNavMenuUserMenu>
 								<NavbarNavMenuUserMenuItem>
