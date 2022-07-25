@@ -1,3 +1,4 @@
 {
-	"greetings": "Vitajte!"
+	"home.greetings": "Vitajte!",
+	"nav.logout": "Odhlasit"
 }

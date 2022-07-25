@@ -24,6 +24,12 @@
 				"singleQuote": false,
 				"parser": "json"
 			}
+		},
+		{
+			"files": "*.css",
+			"options": {
+				"parser": "css"
+			}
 		}
 	]
 }

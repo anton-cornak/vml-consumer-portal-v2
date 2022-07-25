@@ -4,9 +4,13 @@ import React from 'react';
 import { IntlProvider, FormattedMessage } from 'react-intl';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+// Components
+import Home from './screens/home';
+import Navigation from './layout/navbar';
+
+// Translations
 import messagesEN from './translations/en-US.json';
 import messagesSK from './translations/sk-SK.json';
-import Home from './screens/home';
 
 const implementedLanguages: Array<string> = ['en-US', 'sk-SK'];
 const messages: { [key: string]: any } = {
@@ -33,11 +37,13 @@ function App() {
 			}
 		>
 			<Router>
-				<Routes>
-					<Route path="/" element={<Home />} />
-					<Route path="/welcome" element={<Home />} />
-				</Routes>
-				<FormattedMessage id="greetings" />
+				<Navigation>
+					<Routes>
+						<Route path="/" element={<Home />} />
+						<Route path="/welcome" element={<Home />} />
+					</Routes>
+					<FormattedMessage id="home.greetings" />
+				</Navigation>
 			</Router>
 		</IntlProvider>
 	);
