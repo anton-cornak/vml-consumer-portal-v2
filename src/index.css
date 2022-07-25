@@ -16,3 +16,12 @@
 	width: 100%;
 	height: 100%;
 }
+button[role="menuitem"] {
+    background: transparent;
+    border: 0;
+    text-align: left;
+    cursor: pointer;
+}
+button[role="menuitem"]:hover {
+    background: #dceefa;
+}
