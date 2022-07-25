@@ -7,3 +7,5 @@ node_modules
 *.ico
 *.png
 *.md
+*.css
+*.svg
