@@ -1,0 +1,18 @@
+@import '~@vismaux/nordic-cool/dist/css/nc.min.css';
+
+.help-centre-icon {
+	background: transparent;
+	border: 0;
+	float: left;
+	width: 51px;
+	height: 66.5px;
+	overflow: hidden;
+	cursor: pointer;
+}
+.crop-help-icon {
+	background: url('../public/48_help.svg') no-repeat;
+	background-position: -163px 7px;
+	float: left;
+	width: 100%;
+	height: 100%;
+}
