@@ -6,3 +6,5 @@ node_modules
 # Ignore all HTML files:
 *.ico
 *.png
+*.md
+*.svg

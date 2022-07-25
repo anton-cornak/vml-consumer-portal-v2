@@ -1,3 +1,7 @@
 {
-	"greetings": "Hello there!"
+	"home.greetings": "Welcome to the newly refreshed VML Consumer Portal!",
+	"nav.logout": "Log out",
+	"dropzone.description": "Drag and drop a file here or click",
+	"home.login": "LOGIN WITH GOOGLE",
+	"home.demo": "Try Smartscan demo"
 }

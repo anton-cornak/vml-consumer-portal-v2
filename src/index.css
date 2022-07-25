@@ -1,0 +1,134 @@
+@import '~@vismaux/nordic-cool/dist/css/nc.min.css';
+
+.help-centre-icon {
+	background: transparent;
+	border: 0;
+	float: left;
+	width: 51px;
+	height: 66.5px;
+	overflow: hidden;
+	cursor: pointer;
+}
+.crop-help-icon {
+	background: url('../public/48_help.svg') no-repeat;
+	background-position: -163px 7px;
+	float: left;
+	width: 100%;
+	height: 100%;
+}
+button[role='menuitem'] {
+	background: transparent;
+	border: 0;
+	text-align: left;
+	cursor: pointer;
+}
+button[role='menuitem']:hover {
+	background: #dceefa;
+}
+
+.page-heading .short-blue-sep {
+	border-bottom-color: rgba(255, 255, 255, 0.2);
+	max-width: 145px;
+	margin: 20px 0 25px;
+}
+@media (max-width: 992px) {
+	.page-heading .short-blue-sep {
+		display: none;
+	}
+}
+.page-heading h1 {
+	font-size: 28px;
+	margin: 0 0 10px 0;
+	font-weight: 600;
+}
+.page-heading h4 {
+	font-size: 18px;
+}
+.page-heading p {
+	font-size: 16px;
+}
+.page-heading .btn.btn-default {
+	border: 0;
+	font-size: 16px;
+	font-weight: 700;
+	min-width: 335px;
+	line-height: 56px;
+	padding-top: 0;
+	padding-bottom: 0;
+	-webkit-box-shadow: 0px 15px 25px rgba(0, 51, 102, 0.15);
+	-moz-box-shadow: 0px 15px 25px rgba(0, 51, 102, 0.15);
+	box-shadow: 0px 15px 25px rgba(0, 51, 102, 0.15);
+}
+@media (max-width: 992px) {
+	.page-heading .btn.btn-default {
+		min-width: auto;
+		width: 100%;
+	}
+}
+@media (max-width: 992px) {
+	.page-heading {
+		text-align: center;
+		margin-top: -50px;
+		border-radius: 0;
+		margin: 0;
+		padding: 13% 8% 15%;
+	}
+	.page-heading:before {
+		top: 165px;
+		right: auto;
+		margin: 0 auto 35px;
+		width: 84%;
+		background-position: center;
+	}
+	.page-heading h4 {
+		margin-bottom: 240px;
+	}
+}
+@media (min-width: 992px) {
+	.container {
+		width: 67%;
+	}
+}
+.container {
+	padding-left: 8em;
+	padding-right: 8em;
+	padding-top: 4em;
+	padding-bottom: 5em;
+	background-color: white;
+	border-radius: 1em;
+}
+.dropzone {
+	text-align: center;
+	padding: 20px;
+	border-radius: 1em;
+	border: 2px rgb(165, 165, 165) dashed;
+	background-color: rgb(242, 242, 242);
+	width: 100%;
+	height: 250px;
+	margin: auto;
+	cursor: pointer;
+}
+.dropzone-content {
+	color: rgb(100, 100, 100);
+	padding-top: 1.6em;
+	padding-bottom: 1.6em;
+	font-size: 2em;
+}
+.dropzone-icon {
+	width: 50px !important;
+	height: 50px !important;
+	font-size: 2em;
+}
+.google-login-button {
+	text-align: center;
+	padding-top: 2em;
+}
+.google-login-button button {
+	background-color: white;
+	border-radius: 0.4em;
+	border-width: 1px;
+	padding: 0.7em;
+}
+.google-icon {
+	padding-right: 0.6em;
+}

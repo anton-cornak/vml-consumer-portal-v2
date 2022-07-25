@@ -1,8 +1,14 @@
 /** @format */
 
 import React from 'react';
-import { IntlProvider, FormattedMessage } from 'react-intl';
+import { IntlProvider } from 'react-intl';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+// Components
+import Home from './screens/home';
+import Navigation from './layout/navbar';
+
+// Translations
 import messagesEN from './translations/en-US.json';
 import messagesSK from './translations/sk-SK.json';
 
@@ -23,17 +29,21 @@ function App() {
 		return 'en-US';
 	};
 
+	const currentLanguage = locale(implementedLanguages, navigator.language);
+
 	return (
 		<IntlProvider
-			locale={locale(implementedLanguages, navigator.language)}
-			messages={
-				messages[locale(implementedLanguages, navigator.language)]
-			}
+			locale={currentLanguage}
+			messages={messages[currentLanguage]}
 		>
-			Your language is: {locale(implementedLanguages, navigator.language)}
-			. <br />
-			<br />
-			<FormattedMessage id="greetings" />
+			<Router>
+				<Navigation>
+					<Routes>
+						<Route path="/" element={<Home />} />
+						<Route path="/welcome" element={<Home />} />
+					</Routes>
+				</Navigation>
+			</Router>
 		</IntlProvider>
 	);
 }

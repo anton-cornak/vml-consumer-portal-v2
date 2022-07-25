@@ -1,3 +1,7 @@
 {
-	"greetings": "Vitajte!"
+	"home.greetings": "Vitajte!",
+	"nav.logout": "Odhlasit",
+	"dropzone.description": "Drag and drop a file here or click",
+	"home.login": "LOGIN WITH GOOGLE",
+	"home.demo": "...or try demo"
 }
