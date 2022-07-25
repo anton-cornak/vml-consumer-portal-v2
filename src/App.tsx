@@ -1,7 +1,7 @@
 /** @format */
 
 import React from 'react';
-import { IntlProvider } from 'react-intl';
+import { IntlProvider, FormattedMessage } from 'react-intl';
 
 import messagesEN from './translations/en-US.json';
 import messagesSK from './translations/sk-SK.json';
@@ -29,7 +29,12 @@ function App() {
 			messages={
 				messages[locale(implementedLanguages, navigator.language)]
 			}
-		/>
+		>
+			Your language is: {locale(implementedLanguages, navigator.language)}
+			. <br />
+			<br />
+			<FormattedMessage id="greetings" />
+		</IntlProvider>
 	);
 }
 
