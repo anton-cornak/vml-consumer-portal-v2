@@ -53,17 +53,19 @@ function Navigation(props: NavigationProps): ReactElement {
 							/>
 							<NavbarNavMenuUserMenu>
 								<NavbarNavMenuUserMenuItem>
-									<a href="/" role="menuitem">
-										<div title="email@email.com">
-											<div className="user-image" />
-											<div className="user-text">
-												<span>Test User</span>
-												<span className="text-disabled">
-													email@email.com
-												</span>
-											</div>
+									<div
+										title="email@email.com"
+										role="menuitem"
+									>
+										<div className="user-image" />
+										<div className="user-text">
+											<span>Test User</span>
+											<br />
+											<span className="text-disabled">
+												email@email.com
+											</span>
 										</div>
-									</a>
+									</div>
 								</NavbarNavMenuUserMenuItem>
 								<NavbarNavMenuUserMenuDivider isStrong />
 								<NavbarNavMenuUserMenuItem>

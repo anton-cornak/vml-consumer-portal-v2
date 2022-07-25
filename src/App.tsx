@@ -1,7 +1,7 @@
 /** @format */
 
 import React from 'react';
-import { IntlProvider, FormattedMessage } from 'react-intl';
+import { IntlProvider } from 'react-intl';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Components
@@ -42,7 +42,6 @@ function App() {
 						<Route path="/" element={<Home />} />
 						<Route path="/welcome" element={<Home />} />
 					</Routes>
-					<FormattedMessage id="home.greetings" />
 				</Navigation>
 			</Router>
 		</IntlProvider>
