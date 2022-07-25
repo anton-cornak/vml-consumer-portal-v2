@@ -37,7 +37,6 @@ function App() {
 					<Route path="/" element={<Home />} />
 					<Route path="/welcome" element={<Home />} />
 				</Routes>
-				zidan
 				<FormattedMessage id="greetings" />
 			</Router>
 		</IntlProvider>
